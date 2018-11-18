@@ -1,0 +1,415 @@
+/* CURRENTLY IN: styles/main.css */
+
+#app {
+    height: 100%;
+}
+
+.react-container {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    overflow: auto;
+}
+
+#app .MenuBox__CTA {
+    position: fixed;
+    right: 10px;
+    top: 100%;
+    margin-top: -60px;
+    color: black;
+    z-index: 9;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in;
+    width: 300px;
+}
+
+#app .MenuBox__CTA--menu-open {
+    top: 0;
+    margin-top: 10px;
+}
+
+#app .MenuBox__button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid white;
+    transition: all 0.3s ease-in;
+    outline: none;
+    float: right;
+    margin: 5px;
+    margin-top: 0;
+}
+
+#app .MenuBox__icon {
+    color: #292929;
+    position: relative;
+    left: 2px;
+    transition: all 0.3s ease-in;
+}
+
+#app .MenuBox__CTA--menu-open .MenuBox__button {
+    background-color: black;
+}
+
+#app .MenuBox__CTA--menu-open .MenuBox__icon {
+    color: white;
+}
+
+#app .MenuBox__logo {
+    width: 350px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+#app .MenuBox__title {
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+    display: block;
+}
+
+#app .MenuBox__copy {
+    font-size: 20px;
+    margin: 0;
+}
+
+#app .MenuBox__monospace {
+    font-family:monospace,monospace;
+}
+
+#app .MenuBox__keyword-pink {
+    font-weight: bold;
+    color: #F92672;
+}
+
+#app .MenuBox__header {
+    text-align: center;
+}
+
+#app .MenuBox__colwrap {
+    padding-top: 30px;
+    height: 70%;
+    overflow: auto;
+}
+#app .MenuBox__col {
+    border-right: 1px solid black;
+    min-height: 100%;
+}
+
+#app .MenuBox__col:last-child {
+    border-right: none;
+}
+
+#app .MenuBox__keyword-black {
+    font-weight: bold;
+    color: #292929;
+}
+
+#app .MenuBox__keyword-white {
+    font-weight: bold;
+    color: #fff;
+}
+
+#app .MenuBox__keyword-yellow {
+    font-weight: bold;
+    color: #E6DB74;
+}
+
+#app #mainTree {
+}
+
+#app .app-container {
+    height: 100%;
+    padding: 10px;
+}
+
+#app .app-container {
+    padding: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#app .app-container-wrap {
+    overflow: auto;
+}
+
+#app .code-container {
+    border: 5px solid black;    
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 250px;
+}
+
+#app .Numeric .code-container,
+#app .Keyword .code-container {
+    display: inline-block !important;
+}
+
+#app .code-container__remove {
+    font-size: 14px;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-family: Icons;
+}
+
+#app .code-container__remove:before {
+    background: 0 0!important;
+}
+#app .code-container__remove:after {
+    content: 'X';
+    content: "\f00d";
+    color: #fff;
+}
+#app .token.variable.wrapper:hover > .code-container__remove, 
+#app .codeblock:hover > .code-container__remove,
+#app .code-container:hover > .code-container__remove {
+    display: block;
+}
+
+#app .code-container .code-container {
+    background-color: #292929;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    font-family: monospace,monospace;
+}
+
+#app .code-container .code-container:hover {
+    /*background-color: rgba(255,0,0,0.4);
+    color: #292929;
+    */
+    background-color: rgba(255,0,0,0.4);
+    color: #fff;
+    border-color: #fff;
+}
+
+#app .code-container .code-container.code-container--highlight,
+#app .code-container--highlight {
+    border: 5px dashed red;    
+    background-color: rgba(255,0,0,0.4);;
+}
+#app .code-container .code-container .code-container__input,
+#app .code-container .code-container__input {
+    color: #292929;
+}
+
+#app .Identifier {
+    cursor: pointer;
+    border: 1px solid #fff;
+    padding: 2px;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+#app .Identifier-stub .code-container,
+#app .Identifier .code-container {
+    display: inline-block;
+    padding: 7px;
+}
+
+#app .Identifier:hover {
+    background-color: #292929;
+    color: #fff;
+}
+
+#app .draggable-block {
+    border: 2px solid #292929;
+}
+
+#app .draggable-block:hover {
+    background-color: rgba(255,0,0,0.4);
+    border: 2px dashed red;
+}
+
+#app .content {
+    display: block;
+    margin: 2px;
+}
+/*
+    BPP 
+*/
+
+#app .bpp-container {
+    background-color: #292929;
+    padding: 0;
+    overflow: hidden;
+}
+
+#app .bpp-menu {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+#app .bpp-segment {
+    border-radius: 0;
+    margin-top: 0;
+    position: relative;
+    margin-bottom: 0;
+}
+
+#app .close-btn {
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    cursor: pointer;
+}
+
+#app .bpp-container .logo {
+    font-weight: bolder;
+    font-family: monospace;
+}
+
+#app .bpp-container .logo__new {
+    color: red;
+}
+
+#app .main-droppable-container {
+    padding: 10px;
+    height: 100%;
+    padding-top: 0;
+}
+
+#app .empty {
+    color: #fff;
+    font-size: 18px;
+    font-family: monospace;
+    text-transform: uppercase;
+    width: 300px;
+    margin: 50px auto;
+}
+
+#app .bpp-container .logger-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#app .bpp-container .body-wrapper {
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: white;
+    overflow: auto;
+}
+
+#app .problem-choice a,
+#app .problem-choice {
+    font-weight: bold;
+    color: #292929;
+}
+
+#app .problem-choice:hover a,
+#app .problem-choice:hover {
+    color: #fff;
+}
+
+#app .problem-choice:hover {
+    background-color: #2185D0;
+    color: #fff;
+}
+
+#app #mainTree {
+    padding-left: 40px;
+}
+
+#app .code-block {
+    color: white;
+    font-family: monospace;
+    display: inline-block;
+    position: relative;
+}
+
+#app .code-block:hover {
+    /*background-color: rgba(255,255,255,1);
+    color: black;
+    border-radius: 2px;*/
+}
+
+#app #mainTree > .code-block:hover {
+    background-color: #292929;
+    color: #fff;
+}
+
+#app .code-block.type-args,
+#app .code-block.type-generic {
+    min-height: 20px;
+    min-width: 100%;
+    display: inline-block;
+}
+
+#app .code-block.type-args .code-spacer,
+#app .code-block.type-args .type-generic, 
+#app .code-block.type-args br {
+    display: none;
+}
+#app .code-block.type-args > .js-code-block {
+    top: -8px;
+    position: relative;
+}
+#app .code-block.type-args {
+    min-width: 20px;
+    position: relative;
+    top: 8px;
+    left: -4px;
+}
+
+#app .code-block--tabbed {
+    display: block;
+}
+
+#app .code-block__input {
+    background-color: #fff;
+    border: 1px dashed #292929;
+
+    border-radius: 4px;
+    color: #292929;
+}
+
+#app .code-block__input:focus {
+    outline-color: transparent;
+    outline-style: none;
+}
+
+/*
+
+
+*/
+
+#app .codeblock {
+    color: white;
+    font-family: monospace;
+    display: inline-block;
+    position: relative;
+}
+
+#app .codeblock--push {
+    display: block;
+    min-height: 0px;
+    padding: 10px 0;
+}
+
+#app .codeblock--highlight {
+    border: 5px dashed red;    
+    background-color: rgba(255,0,0,0.4);;
+}
+
+#app .codeblock--swap .codeblock--push {
+    display: none;
+}
+
+#app .token.wrapper {
+    display: block;
+    padding-left: 20px;
+    position: relative;
+}
+
+#app .token.wrapper.args {
+    display: inline-block;
+    min-width: 20px;
+    min-height: 20px;
+}

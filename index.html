@@ -1,0 +1,49 @@
+<!doctype html>
+<html manifest="tabnotes.appcache"  type="text/cache-manifest">
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0;'>
+    <title>RESOURCEWATCH: CSV</title>
+    <link rel='stylesheet' href='styles/semantic.min.css'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism-okaidia.min.css">
+    <link rel='stylesheet' href='styles/main.css'>
+</head>
+<body id="app">
+
+    <div class="react-container">
+        <div class="app-container bpp-container" style="overflow: auto; padding-bottom: 66px; background-color: rgb(247, 247, 247);">
+            <div class="ui two column centered grid">
+                <div class="column">
+                    <h1 style="text-align: center; margin-top: 20px; font-weight: 900;"><a href="https://resourcewatch.org/data/explore/Climate-Change-Impacts-on-Crop-Production" target="_blank">ResourceWatch</a>: CSV</h1>
+                    <hr/>
+                    <p style="font-size: 20px; line-height: 28px;">
+                        In order to use this tool, please make sure you have clicked the `Table` tab on the dataset you are trying to scrape.
+                    </p>
+
+                    <p style="font-size: 20px; line-height: 28px;">
+                        To get started, drag the button below to your bookmarks bar. Anytime you need to download the data table into a CSV, just hit the button on your bookmarks bar and a download should comment. 
+                    </p>
+
+                    <p style="font-size: 20px; line-height: 28px;text-align: center;">
+                        Drag the button below to <br/>your bookmarks toolbar.
+                        <br />
+                        <br />
+                        <!-- https://repl.it/@mottaquikarim/PoorAgedSoftwareagent -->
+                        <a class="button green ui massive" id="codeOut" href="javascript:(function(){(function(){const buildCSV=()=>Array.from(document.querySelectorAll('.visualization table tr')).reduce((arr,curr,i)=>arr.concat([Array.from(curr.querySelectorAll((i===0)?'th':'td')).map(col=>col.innerHTML).join(',')]),[]).join('\n');const getFileName=()=>document.querySelector('.page-header-content > h1').innerHTML .split(' ').join('-').concat(['.csv']);const dl=data=>{const element=document.createElement('a');element.setAttribute('href','data:text/plain;charset=utf-8,'+encodeURIComponent(data));element.setAttribute('download',getFileName());element.style.display='none';document.body.appendChild(element);element.click();document.body.removeChild(element);};try{dl(buildCSV());}catch(e){alert(&quot;Something went wrong! &quot;+e)}})();})();">RESOURCEWATCH: CSV</a>
+                        <br />
+                        <br />
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div><!-- react container -->
+
+
+    <script>
+        var html = document.getElementById("data").innerHTML;
+        document.querySelector('#tabNotes').setAttribute('href', html);
+    </script>
+</body>
+</html>
